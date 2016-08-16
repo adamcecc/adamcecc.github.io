@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="freq.css">
+  <title>Frequency UI</title>
+</head>
+<body>
+
+<div class="div1">
+ <button id="ButtonCollapse" class="button buttonTop">Collapse</button>
+  
+ <button id="ButtonFormat" 
+         class="button buttonTop"
+         onclick="dh(this,'ButtonEject')">Format</button>
+  
+ <button id="ButtonEject" 
+         class="button buttonBottom" 
+         onclick="dh(this,'ButtonFormat')">Eject</button>
+  
+ <button id="ButtonCut" class="button"
+         onclick="dh(this,'ButtonCopy')">Cut</button>
+  
+ <button id="ButtonCopy" 
+         class="button buttonBottom" 
+         onclick="dh(this,'ButtonCut')">Copy</button>
+</div>
+  
+<script>
+function dh(main,elmnt) {  
+    if(main.h_count == null) {
+      main.h_count = 35;
+    } else {
+      main.h_count += 2;
+      if(main.h_count > 50) 
+      {
+        main.h_count = 50;
+      }
+    }
+
+    var e = document.getElementById(elmnt);
+    if(e.h_count == null) { 
+      e.h_count = 35;
+    } else { 
+      e.h_count -= 2; 
+      if(e.h_count < 30) {
+        elmnt.h_count = 30; 
+      }
+    }
+    
+    main.style.height = main.h_count + 'px';
+    e.style.height = e.h_count + 'px';
+  
+    /*
+    e.style.fontSize = e.h_count / 2 + 'px';
+    main.style.fontSize = main.h_count / 2 + 'px';
+    */
+}
+</script> 
+</body>
+</html>

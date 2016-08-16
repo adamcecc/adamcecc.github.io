@@ -1,0 +1,30 @@
+.div1 {
+  max-width: 250px; 
+}
+
+.button {
+    background-color: #F2F2F2; /* Green */
+    border: none;
+    color: black;
+    width: 270px;
+    height: 30px;
+    float top; 
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-height: 22px;
+}
+
+.buttonTop {
+    background-color: #F2F2F2;
+    color: black;
+   
+}
+
+.buttonBottom {
+    background-color: #F2F2F2;
+    color: black;
+   
+}
